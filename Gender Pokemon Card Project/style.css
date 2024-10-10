@@ -1,0 +1,132 @@
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    /* độ dài là tính luôn cả border */
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 10px */
+}
+
+body {
+    font-size: 1.6rem;
+    /* 16px */
+    /* font */
+    font-family: "Poppins", sans-serif;
+    background-color: #eff3ff;
+}
+
+/* container */
+.container {
+    width: 35rem;
+    /* border: 2px solid black; */
+    /* combo đánh ra chính xác chính giữa */
+    /* xài position sẽ canh theo html luôn */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* tự dời lại so với chính nó phân nữa */
+    transform: translate(-50%, -50%);
+    
+}
+
+/* card */
+#card {
+    /* position ở đây để bên trong căn theo cho dễ */
+    position: relative;
+    /* màu lõm ở card */
+    /* background: radial-gradient(circle at 50% 0%, orange 36%, #ffffff 36%); */
+    width: 100%;
+    /* border: 1px solid crimson; */
+    padding: 3rem 2rem;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    
+}
+
+/* hình ảnh */
+#card img{
+    /* cái hình muốn chỉnh độ lớn thì phải fix lại display */
+    display: block;
+    width: 17rem;
+    max-width: 20rem;
+    margin: 2rem auto;
+}
+/* máu */
+.hp{
+    width: 6.5rem;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 3rem;
+    /* ngta muốn đẩy nó qua một bên hẵn luôn sẽ dùng đòn này */
+    /* vì lúc nãy cái card ở trong mình đã cho nó có padding so với container */
+    /* chính vì vậy đẩy bằng hết margin-left sẽ siêu hay */
+    margin-left: auto;
+    font-weight: 400;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* tên */
+.poke-name{
+    text-align: center;
+    font-weight: 600;
+}
+/* hệ */
+.types{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0 4rem 0;
+}
+
+/* fix cho các chữ của mấy type và hp nhỏ xuống */
+.hp span,
+.types span{
+    font-size: 1.2rem;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+}
+
+/* chỉnh cho các type của card */
+.types span{
+    padding: 0.5rem 2rem;
+    /* background: brown; */
+    color: #ffffff;
+    border-radius: 2rem;
+    width: 9rem;
+    text-align: center;
+}
+
+/* stats: thống kê */
+.stats{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.stats p{
+    color: #404060;
+}
+
+/* button */
+#btn{
+    display: block;
+    margin: 3rem auto;
+    border: none;
+    border-radius: 5px;
+    padding: 1.5rem 6rem;
+    font-size: 1.8rem;
+    background-color: #101010;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+#btn:hover{
+    background-color: rgb(161, 152, 141);
+
+}
